@@ -43,36 +43,43 @@ private struct FrontCard: View {
     }
 
     var body: some View {
-        RoundedRectangle(cornerRadius: 24, style: .continuous)
-            .fill(.white)
-            .frame(width: 420, height: 270)
-            .shadow(radius: 12)
-            .overlay(
-                VStack(spacing: 24) {
+            RoundedRectangle(cornerRadius: 24, style: .continuous)
+                .fill(.white)
+                .frame(width: 420, height: 340)
+                .shadow(radius: 12)
+                .overlay(
+                    VStack(spacing: 24) {
+                        CountdownText(components: remaining)
+                            .font(.largeTitle.monospacedDigit())
+                            .foregroundColor(.black)
 
-                    CountdownText(components: remaining)
-                        .font(.largeTitle.monospacedDigit())
-                        .foregroundColor(.black)
+                        HeartsLine(progress: progress)
+                            .frame(height: 40)
 
-                    HeartsLine(progress: progress)
-                        .frame(height: 40)
+                        HStack(spacing: 16) {
+                            PhotoOfDayView()
+                                .frame(width: 120, height: 120)
+
+                            Text("Your photo goes here on the big day!")
+                                .font(.footnote)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.black)
+                        }
+                        .padding(.horizontal, 12)
+                    }
+                    .padding()
+                )
+                .onReceive(Timer.publish(every: 60, on: .main, in: .common).autoconnect()) {
+                    now = $0
                 }
-                .padding()
-            )
-
-            .onReceive(Timer.publish(every: 60, on: .main, in: .common).autoconnect()) {
-                now = $0
-            }
-
-            .onAppear {
-                let mins = londonCalendar.dateComponents([.minute], from: now, to: target).minute ?? 0
-                totalMinutes = max(mins, 1)
-            }
-    }
+                .onAppear {
+                    let mins = londonCalendar.dateComponents([.minute], from: now, to: target).minute ?? 0
+                    totalMinutes = max(mins, 1)
+                }
+        }
 }
 
 private struct HeartsLine: View {
-    /// 0 = far apart, 1 = touching
     let progress: Double
 
     var body: some View {
