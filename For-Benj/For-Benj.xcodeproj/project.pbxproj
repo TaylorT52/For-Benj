@@ -15,6 +15,7 @@
 		FCD163C12E03E622004F0B8D /* For_BenjUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD163C02E03E622004F0B8D /* For_BenjUITests.swift */; };
 		FCD163C32E03E622004F0B8D /* For_BenjUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD163C22E03E622004F0B8D /* For_BenjUITestsLaunchTests.swift */; };
 		FCD163D02E03E7D8004F0B8D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD163CF2E03E7D8004F0B8D /* MainView.swift */; };
+		FCD163D62E0A6E35004F0B8D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD163D52E0A6E35004F0B8D /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		FCD163C02E03E622004F0B8D /* For_BenjUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = For_BenjUITests.swift; sourceTree = "<group>"; };
 		FCD163C22E03E622004F0B8D /* For_BenjUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = For_BenjUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FCD163CF2E03E7D8004F0B8D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FCD163D52E0A6E35004F0B8D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				FCD163AD2E03E622004F0B8D /* For_Benj.entitlements */,
 				FCD163AA2E03E622004F0B8D /* Preview Content */,
 				FCD163CF2E03E7D8004F0B8D /* MainView.swift */,
+				FCD163D52E0A6E35004F0B8D /* CardView.swift */,
 			);
 			path = "For-Benj";
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			files = (
 				FCD163A72E03E621004F0B8D /* ContentView.swift in Sources */,
 				FCD163D02E03E7D8004F0B8D /* MainView.swift in Sources */,
+				FCD163D62E0A6E35004F0B8D /* CardView.swift in Sources */,
 				FCD163A52E03E621004F0B8D /* For_BenjApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
